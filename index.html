@@ -29,9 +29,9 @@
     </nav>
 
     <!-- Banner section -->
-    <section class="flex justify-between items-center bg-[#CFF0DC]">
+    <section class="flex md:justify-between justify-center items-center bg-[#CFF0DC] pb-[10px]">
 
-        <img class="w-[120px] h-[70px] md:w-[500px] md:h-[350px]" src="./assets/hero-leaf1.png" alt="leaf1">
+        <img class="w-[120px] h-[70px] md:w-[500px] md:h-[350px] hidden md:block" src="./assets/hero-leaf1.png" alt="leaf1">
 
         <div class="flex flex-col justify-center items-center gap-3 md:gap-5">
             <div class="flex flex-col justify-center items-center md:gap-3">
@@ -48,43 +48,103 @@
             </button>
         </div>
 
-        <img class="w-[120px] h-[70px] md:w-[500px] md:h-[350px]" src="./assets/hero-leaf2.png" alt="leaf2">
+        <img class="w-[120px] h-[70px] md:w-[500px] md:h-[350px] hidden md:block" src="./assets/hero-leaf2.png" alt="leaf2">
 
     </section>
 
     <!-- Choose ur trees -->
-    <section class="flex flex-col justify-center items-center mt-[100px] mx-auto gap-5">
+    <section class="flex flex-col justify-between items-center mt-[20px] md:mt-[100px] gap-5">
 
-        <span class="text-xl">
+        <span class="text-md md:text-xl">
             Choose Your Trees
         </span>
-
         
-        <div class="border flex justify-between gap-10">
+        <div class="w-full flex gap-5 md:gap-10 px-[10px] md:pl-[40px]">
+
+            <!-- Categories and Cart for mobile -->
+            <div class="block md:hidden w-[120px] h-full">
+                <!-- Categories -->
+                <div class="flex flex-col gap-2 w-[100px] md:w-[150px] h-[200px]">
+                    <span class="text-sm md:text-2xl font-bold">
+                        Categories
+                    </span>
+                    <div id="category" class="flex flex-col gap-1">
+                        <span class="text-[12px] md:text-md pl-[7px] text-white bg-green-700 cursor-pointer">
+                            All Trees
+                        </span>
+                        <span class="text-[12px] md:text-md pl-[7px] cursor-pointer">
+                            Fruit Trees
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <div class="w-[120px] md:w-[200px] h-full bg-white rounded-xl">
+                    <div class="flex flex-col gap-2 w-full h-[200px] px-[10px] md:px-[15px]">
+                        <span class="text-md md:text-2xl font-bold mt-[5px]">
+                            Your Cart
+                        </span>
+                        <div id="cart" class="flex flex-col gap-2">
+
+                            <!-- Order 1 -->
+                            <div class="flex justify-between items-center h-[50px] gap-1 px-[7px] md:px-[12px] bg-[#DCFCE7] rounded-xl w-full">
+                                    <div class="flex flex-col gap-1">
+                                        <span class="text-[10px] md:text-[15px]">
+                                            Mango Tree
+                                        </span>
+                                        <span class="text-xs md:text-sm text-gray-500">
+                                            ৳500 x 1
+                                        </span>
+                                    </div>
+                                    <span class="text-xs md:text-sm text-gray-500 cursor-pointer">
+                                        X
+                                    </span>
+                            </div>
+
+                            <!-- Order 2 -->
+                            <div class="flex justify-between items-center h-[50px] gap-1 px-[7px] md:px-[12px] bg-[#DCFCE7] rounded-xl w-full">
+                                    <div class="flex flex-col gap-1">
+                                        <span class="text-[10px] md:text-[15px]">
+                                            Mango Tree
+                                        </span>
+                                        <span class="text-xs md:text-sm text-gray-500">
+                                            ৳500 x 1
+                                        </span>
+                                    </div>
+                                    <span class="text-xs md:text-sm text-gray-500 cursor-pointer">
+                                        X
+                                    </span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Categories -->
-            <div class="flex flex-col gap-2 w-[150px] h-[200px] border border-red-600">
-                <span class="font-bold">
+            <div class="hidden md:block flex flex-col gap-5 w-[80px] md:w-[150px] h-full">
+                <span class="text-sm md:text-2xl font-bold mb-[10px]">
                     Categories
                 </span>
-                <div id="category" class="flex flex-col">
-                    <span class="text-sm text-white bg-green-700 cursor-pointer">
+                <div id="category" class="flex flex-col gap-1 mt-[10px]">
+                    <span class="text-sm md:text-md text-white bg-green-700 pl-[5px] cursor-pointer">
                         All Trees
                     </span>
-                    <span>
+                    <span class="text-sm md:text-md pl-[5px] cursor-pointer">
                         Fruit Trees
                     </span>
                 </div>
             </div>
 
             <!-- Cards -->
-            <div class="w-[1000px] h-full grid grid-cols-3 gap-9">
+            <div class="w-[160px] md:w-[1000px] h-full grid grid-col md:grid-cols-3 gap-4 md:gap-9">
 
                 <!-- card 1 -->
-                <div class="w-[320px] h-[370px] flex flex-col justify-center items-center gap-2 rounded-xl bg-white px-[12px] border border-blue-600">
+                <div class="w-[320px] h-[390px] flex flex-col justify-center items-center gap-3 rounded-xl bg-white px-[12px] shadow-xl">
                     <img class="w-[300px] h-[175px]" src="./assets/hero-leaf1.png" alt="" />
-                    <div class="flex flex-col gap-1">
-                        <span class="font-bold">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-xl font-bold">
                             Mango Tree
                         </span>
                         <span class="text-gray-500">
@@ -104,10 +164,10 @@
                     </button>
                 </div>
 
-                                <div class="w-[320px] h-[370px] flex flex-col justify-center items-center gap-2 rounded-xl bg-white px-[12px] border border-blue-600">
+                <div class="w-[320px] h-[390px] flex flex-col justify-center items-center gap-3 rounded-xl bg-white px-[12px] shadow-xl">
                     <img class="w-[300px] h-[175px]" src="./assets/hero-leaf1.png" alt="" />
-                    <div class="flex flex-col gap-1">
-                        <span class="font-bold">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-xl font-bold">
                             Mango Tree
                         </span>
                         <span class="text-gray-500">
@@ -127,10 +187,10 @@
                     </button>
                 </div>
 
-                                <div class="w-[320px] h-[370px] flex flex-col justify-center items-center gap-2 rounded-xl bg-white px-[12px] border border-blue-600">
+                <div class="w-[320px] h-[390px] flex flex-col justify-center items-center gap-3 rounded-xl bg-white px-[12px] shadow-xl">
                     <img class="w-[300px] h-[175px]" src="./assets/hero-leaf1.png" alt="" />
-                    <div class="flex flex-col gap-1">
-                        <span class="font-bold">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-xl font-bold">
                             Mango Tree
                         </span>
                         <span class="text-gray-500">
@@ -149,46 +209,43 @@
                         Add to Cart
                     </button>
                 </div>
-                <div class="w-[320px] h-[370px] border border-blue-600"></div>
-                <div class="w-[320px] h-[370px] border border-blue-600"></div>
-                <div class="w-[320px] h-[370px] border border-blue-600"></div>
 
             </div>
 
             <!-- Cart -->
-            <div class="w-[200px] h-[200px] bg-white">
-                <div class="flex flex-col gap-2 w-full h-[200px] px-[15px] border border-blue-600">
-                    <span class="font-bold">
+            <div class="hidden md:block w-[120px] md:w-[200px] h-full bg-white rounded-xl pt-[10px]">
+                <div class="flex flex-col gap-2 w-full h-[200px] px-[10px] md:px-[15px] ">
+                    <span class="text-md md:text-2xl font-bold">
                         Your Cart
                     </span>
-                    <div id="cart" class="flex flex-col gap-3">
+                    <div id="cart" class="flex flex-col gap-2">
 
                         <!-- Order 1 -->
-                        <div class="flex justify-between items-center h-[50px] px-[12px] bg-[#DCFCE7] rounded-xl w-full">
-                                <div class="flex flex-col">
-                                    <span class="text-[15px]">
+                        <div class="flex justify-between items-center h-[50px] gap-1 px-[7px] md:px-[12px] bg-[#DCFCE7] rounded-xl w-full">
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-[10px] md:text-[15px]">
                                         Mango Tree
                                     </span>
-                                    <span class="text-sm text-gray-500">
+                                    <span class="text-xs md:text-sm text-gray-500">
                                         ৳500 x 1
                                     </span>
                                 </div>
-                                <span class="text-sm cursor-pointer">
+                                <span class="text-xs md:text-sm text-gray-500 cursor-pointer">
                                     X
                                 </span>
                         </div>
 
-                         <!-- Order 2 -->
-                        <div class="flex justify-between items-center h-[50px] px-[12px] bg-[#DCFCE7] rounded-xl w-full">
-                                <div class="flex flex-col">
-                                    <span class="text-[15px]">
+                        <!-- Order 2 -->
+                        <div class="flex justify-between items-center h-[50px] gap-1 px-[7px] md:px-[12px] bg-[#DCFCE7] rounded-xl w-full">
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-[10px] md:text-[15px]">
                                         Mango Tree
                                     </span>
-                                    <span class="text-sm text-gray-500">
+                                    <span class="text-xs md:text-sm text-gray-500">
                                         ৳500 x 1
                                     </span>
                                 </div>
-                                <span class="text-sm cursor-pointer">
+                                <span class="text-xs md:text-sm text-gray-500 cursor-pointer">
                                     X
                                 </span>
                         </div>
@@ -199,7 +256,28 @@
             </div>
             
         </div>
+
     </section>
 
+    <!-- About Campaign -->
+    <section class="flex flex-col gap-10 mt-[50px] md:mt-[100px] mx-[50px] md:mx-[230px]">
+        <span class="text-center text-xl md:text-4xl font-bold">
+            About the Campaign
+        </span>
+        <div class="flex justify-center items-center gap-5">
+            <img class="hidden md:block w-[500px] h-[500px] flex-1 shadow-xl" src="./assets/about.png" alt="about">
+            <div class="flex-1">
+                <span class="text-gray-500">
+                    Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.
+                </span>
+                <ul class="list-disc pl-5 text-gray-500 pt-[20px]">
+                    <li>Restoration of natural habitats</li>
+                    <li>Improvement of air quality</li>
+                    <li>Support for local communities</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
 </body>
 </html>
