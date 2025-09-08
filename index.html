@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>PH-GreenEarth</title>
 </head>
-<body>
+<body class="bg-[#DCFCE7]"> 
 
     <nav class="flex justify-between items-center bg-green-700 px-[25px] py-[15px] md:px-[100px] md:py-[20px]">
         <span class="text-white text-md md:text-xl font-bold">
@@ -28,11 +28,12 @@
         </button>
     </nav>
 
+    <!-- Banner section -->
     <section class="flex justify-between items-center bg-[#CFF0DC]">
 
         <img class="w-[120px] h-[70px] md:w-[500px] md:h-[350px]" src="./assets/hero-leaf1.png" alt="leaf1">
 
-        <div class="flex flex-col justify-center items-center gap-3 md:gap-5 border">
+        <div class="flex flex-col justify-center items-center gap-3 md:gap-5">
             <div class="flex flex-col justify-center items-center md:gap-3">
                 <span class="text-center font-bold text-md md:text-4xl">
                     Plant a Tree, Grow a Future
@@ -50,5 +51,155 @@
         <img class="w-[120px] h-[70px] md:w-[500px] md:h-[350px]" src="./assets/hero-leaf2.png" alt="leaf2">
 
     </section>
+
+    <!-- Choose ur trees -->
+    <section class="flex flex-col justify-center items-center mt-[100px] mx-auto gap-5">
+
+        <span class="text-xl">
+            Choose Your Trees
+        </span>
+
+        
+        <div class="border flex justify-between gap-10">
+
+            <!-- Categories -->
+            <div class="flex flex-col gap-2 w-[150px] h-[200px] border border-red-600">
+                <span class="font-bold">
+                    Categories
+                </span>
+                <div id="category" class="flex flex-col">
+                    <span class="text-sm text-white bg-green-700 cursor-pointer">
+                        All Trees
+                    </span>
+                    <span>
+                        Fruit Trees
+                    </span>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="w-[1000px] h-full grid grid-cols-3 gap-9">
+
+                <!-- card 1 -->
+                <div class="w-[320px] h-[370px] flex flex-col justify-center items-center gap-2 rounded-xl bg-white px-[12px] border border-blue-600">
+                    <img class="w-[300px] h-[175px]" src="./assets/hero-leaf1.png" alt="" />
+                    <div class="flex flex-col gap-1">
+                        <span class="font-bold">
+                            Mango Tree
+                        </span>
+                        <span class="text-gray-500">
+                            A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                        </span>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-center bg-green-100 rounded-3xl w-[90px]">
+                                Fruit Tree
+                            </span>
+                            <span>
+                                ৳500
+                            </span>
+                        </div>
+                    </div>
+                    <button class="text-white bg-green-700 hover:bg-green-500 w-full h-[30px] rounded-4xl cursor-pointer">
+                        Add to Cart
+                    </button>
+                </div>
+
+                                <div class="w-[320px] h-[370px] flex flex-col justify-center items-center gap-2 rounded-xl bg-white px-[12px] border border-blue-600">
+                    <img class="w-[300px] h-[175px]" src="./assets/hero-leaf1.png" alt="" />
+                    <div class="flex flex-col gap-1">
+                        <span class="font-bold">
+                            Mango Tree
+                        </span>
+                        <span class="text-gray-500">
+                            A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                        </span>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-center bg-green-100 rounded-3xl w-[90px]">
+                                Fruit Tree
+                            </span>
+                            <span>
+                                ৳500
+                            </span>
+                        </div>
+                    </div>
+                    <button class="text-white bg-green-700 hover:bg-green-500 w-full h-[30px] rounded-4xl cursor-pointer">
+                        Add to Cart
+                    </button>
+                </div>
+
+                                <div class="w-[320px] h-[370px] flex flex-col justify-center items-center gap-2 rounded-xl bg-white px-[12px] border border-blue-600">
+                    <img class="w-[300px] h-[175px]" src="./assets/hero-leaf1.png" alt="" />
+                    <div class="flex flex-col gap-1">
+                        <span class="font-bold">
+                            Mango Tree
+                        </span>
+                        <span class="text-gray-500">
+                            A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                        </span>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-center bg-green-100 rounded-3xl w-[90px]">
+                                Fruit Tree
+                            </span>
+                            <span>
+                                ৳500
+                            </span>
+                        </div>
+                    </div>
+                    <button class="text-white bg-green-700 hover:bg-green-500 w-full h-[30px] rounded-4xl cursor-pointer">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="w-[320px] h-[370px] border border-blue-600"></div>
+                <div class="w-[320px] h-[370px] border border-blue-600"></div>
+                <div class="w-[320px] h-[370px] border border-blue-600"></div>
+
+            </div>
+
+            <!-- Cart -->
+            <div class="w-[200px] h-[200px] bg-white">
+                <div class="flex flex-col gap-2 w-full h-[200px] px-[15px] border border-blue-600">
+                    <span class="font-bold">
+                        Your Cart
+                    </span>
+                    <div id="cart" class="flex flex-col gap-3">
+
+                        <!-- Order 1 -->
+                        <div class="flex justify-between items-center h-[50px] px-[12px] bg-[#DCFCE7] rounded-xl w-full">
+                                <div class="flex flex-col">
+                                    <span class="text-[15px]">
+                                        Mango Tree
+                                    </span>
+                                    <span class="text-sm text-gray-500">
+                                        ৳500 x 1
+                                    </span>
+                                </div>
+                                <span class="text-sm cursor-pointer">
+                                    X
+                                </span>
+                        </div>
+
+                         <!-- Order 2 -->
+                        <div class="flex justify-between items-center h-[50px] px-[12px] bg-[#DCFCE7] rounded-xl w-full">
+                                <div class="flex flex-col">
+                                    <span class="text-[15px]">
+                                        Mango Tree
+                                    </span>
+                                    <span class="text-sm text-gray-500">
+                                        ৳500 x 1
+                                    </span>
+                                </div>
+                                <span class="text-sm cursor-pointer">
+                                    X
+                                </span>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
 </body>
 </html>
