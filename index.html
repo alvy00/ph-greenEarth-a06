@@ -285,7 +285,7 @@
             <span class="text-xl md:text-4xl font-bold">
                 Our Impact
             </span>
-            <div class="grid grid-rows-3 md:grid-cols-3 gap-5 ">
+            <div class="h-[230px] md:h-[100px] grid grid-rows-3 md:grid-cols-3 gap-5 ">
                 <div class="w-[180px] h-[70px] md:w-[250px] md:h-[100px] flex flex-col gap-2 justify-center items-center rounded-2xl bg-white">
                     <span class="text-xl md:text-2xl font-bold text-green-600">
                         500K+
@@ -315,5 +315,29 @@
 
             </div>
     </section>
+
+    <!-- Plant a Tree -->
+     <section class="flex flex-col justify-center items-center bg-[#166534] py-[60px]">
+        <div class="flex flex-col justify-center items-center">
+            <span class="text-center text-white text-3xl bg-[#166534] mb-[15px]">
+                Plant a Tree Today
+            </span>
+            <div class="flex flex-col justify-center items-center bg-[#15803D] w-[400px] h-[300px] rounded-xl">
+                <label for="full_name"></label>
+                <input class="bg-white w-[350px] py-[3px] pl-[5px] rounded-sm mb-[8px]" type="text" name="full_name" placeholder="Full Name">
+                <label for="email"></label>
+                <input class="bg-white w-[350px] py-[3px] pl-[5px] rounded-sm mb-[8px]" type="text" name="email" placeholder="Email">
+                <select class="bg-white w-[350px] mb-[20px]" name="numTrees" id="numTrees" aria-placeholder="num of trees">
+                    <option selected class="bg-white" value="Number of trees">Number of trees</option>
+                    <option class="bg-white" value="1">1</option>
+                    <option class="bg-white" value="2">2</option>
+                    <option class="bg-white" value="3">3</option>
+                </select>
+                <button class="text-green-500 w-[350px] h-[30px] rounded-3xl cursor-pointer bg-yellow-400 hover:bg-yellow-200">
+                    Donate Now
+                </button>
+            </div>
+        </div>
+     </section>
 </body>
 </html>
