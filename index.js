@@ -6,6 +6,9 @@ getInBtn.addEventListener('click', () => {
     console.log("get in clicked")
 })
 
+// Global
+const total = document.querySelectorAll('#total');
+
 // Loading screens
 const allCatSM = document.getElementById('allCatSM');
 const allCatMD = document.getElementById('allCatMD');
@@ -105,17 +108,29 @@ const getPlants = async () => {
                         ${plants[i].category}
                     </span>
                     <span class="flex justify-between">
-                        ৳ <span>${plants[i].price}</span>
+                        ৳ <span class="price">${plants[i].price}</span>
                     </span>
                 </div>
             </div>
-            <button class="text-[12px] md:text-sm text-white bg-green-700 hover:bg-green-500 w-full h-[25px] md:h-[30px] rounded-4xl cursor-pointer">
+            <button class="addCartBtn text-[12px] md:text-sm text-white bg-green-700 hover:bg-green-500 w-full h-[25px] md:h-[30px] rounded-4xl cursor-pointer">
                 Add to Cart
             </button>
         `
 
         cardsContainer.appendChild(newPlant);
     }
+
+    document.querySelectorAll('.addCartBtn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const card = btn.parentElement;
+            let price = parseInt(card.querySelector(".price").innerText)
+            let newPrice = parseInt(total[0].innerText) + price;
+            total[0].innerText = newPrice;
+            total[1].innerText = newPrice;
+            console.log(total[0].innerText);
+            //console.log(price)
+        })
+    })
 
     cardLoading.classList.add('hidden');
     cardsContainer.classList.remove('hidden');
@@ -153,7 +168,7 @@ const getPlantsCat = async (id) => {
                         ${plantsCat[i].category}
                     </span>
                     <span class="flex justify-between">
-                        ৳ <span>${plantsCat[i].price}</span>
+                        ৳ <span class="price">${plantsCat[i].price}</span>
                     </span>
                 </div>
             </div>
@@ -161,6 +176,16 @@ const getPlantsCat = async (id) => {
                 Add to Cart
             </button>
         `
+
+        document.querySelectorAll('.addCartBtn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const card = btn.parentElement;
+                let price = parseInt(card.querySelector(".price").innerText);
+                let newPrice = parseInt(total.innerText) + price;
+                total.innerText = newPrice;
+                console.log("Added:", price, "New total:", newPrice);
+            });
+        });
         cardsContainer.appendChild(newPlant);
     }
 
@@ -192,3 +217,4 @@ const addSelected = (category) => {
     //console.log(catCollSM);
     //console.log(catCollMD);
 }
+
