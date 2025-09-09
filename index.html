@@ -84,41 +84,25 @@
 
                 <!-- Cart -->
                 <div class="w-[120px] md:w-[200px] h-full bg-white rounded-xl">
-                    <div class="flex flex-col gap-2 w-full h-[200px] px-[10px] md:px-[15px]">
+                    <div class="flex flex-col gap-2 w-full h-full px-[10px] md:px-[15px]">
                         <span class="text-md md:text-2xl font-bold mt-[5px]">
                             Your Cart
                         </span>
                         <div id="smCart" class="flex flex-col gap-2">
-
                             <!-- Order 1 -->
-                            <div class="flex justify-between items-center h-[50px] gap-1 px-[7px] md:px-[12px] bg-[#DCFCE7] rounded-xl w-full">
-                                    <div class="flex flex-col gap-1">
-                                        <span class="text-[10px] md:text-[15px]">
-                                            Mango Tree
-                                        </span>
-                                        <span class="text-xs md:text-sm text-gray-500">
-                                            ৳500 x 1
-                                        </span>
-                                    </div>
-                                    <span class="text-xs md:text-sm text-gray-500 cursor-pointer">
-                                        X
+                            <!-- <div class="flex justify-between items-center h-[50px] gap-1 px-[7px] md:px-[12px] bg-[#DCFCE7] rounded-xl w-full">
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-[10px] md:text-[15px]">
+                                        Mango Tree
                                     </span>
-                            </div>
-
-                            <!-- Order 2 -->
-                            <div class="flex justify-between items-center h-[50px] gap-1 px-[7px] md:px-[12px] bg-[#DCFCE7] rounded-xl w-full">
-                                    <div class="flex flex-col gap-1">
-                                        <span class="text-[10px] md:text-[15px]">
-                                            Mango Tree
-                                        </span>
-                                        <span class="text-xs md:text-sm text-gray-500">
-                                            ৳500 x 1
-                                        </span>
-                                    </div>
-                                    <span class="text-xs md:text-sm text-gray-500 cursor-pointer">
-                                        X
+                                    <span class="text-xs md:text-sm text-gray-500">
+                                        ৳500 x 1
                                     </span>
-                            </div>
+                                </div>
+                                <span class="text-xs md:text-sm text-gray-500 cursor-pointer">
+                                    X
+                                </span>
+                            </div> -->
                         </div>
                         <hr class="border border-gray-300 mt-2" />
                         <div class="flex justify-between">
@@ -171,7 +155,7 @@
                     </span>
                     <div id="mdCart" class="flex flex-col gap-2 h-full">
                         <!-- Order 1 -->
-                        <div class="flex justify-between items-center h-[50px] gap-1 px-[7px] md:px-[12px] bg-[#DCFCE7] rounded-xl w-full">
+                        <!-- <div class="flex justify-between items-center h-[50px] gap-1 px-[7px] md:px-[12px] bg-[#DCFCE7] rounded-xl w-full">
                                 <div class="flex flex-col gap-1">
                                     <span class="text-[10px] md:text-[15px]">
                                         Mango Tree
@@ -183,8 +167,7 @@
                                 <span class="text-xs md:text-sm text-gray-500 cursor-pointer">
                                     X
                                 </span>
-                        </div>
-
+                        </div> -->
                     </div>
                     <hr class="border border-gray-300 mt-2" />
                     <div class="flex justify-between">
@@ -290,6 +273,27 @@
             © 2025 Green Earth. All Rights Reserved.
         </span>
     </section>
+
+    <!-- Modal -->
+    <dialog id="detail" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-6 shadow-lg">
+        <div class="flex flex-col">
+            <div id="detailBox" class="detailBox">
+                <img class="w-[150px] h-[125px] md:w-[550px] md:h-[375px]" src="https://i.ibb.co.com/WNbbx3rn/guava-min.jpg" alt="plant" />
+                <div class="flex flex-col mt-4 gap-2">
+                    <span class="font-bold">Guava Tree</span>
+                    <span class="text-sm text-gray-500">Dlafgj alsdfj aklsdfj sakldfj k</span>
+                    <span>৳500</span>
+                </div>
+            </div>
+
+            <div class="modal-action flex justify-end mt-4">
+                <form method="dialog">
+                    <button class="btn cursor-pointer w-max px-[5px] py-[3px] rounded-lg bg-gray-200">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
     <script src="index.js"></script>
 </body>
 </html>
